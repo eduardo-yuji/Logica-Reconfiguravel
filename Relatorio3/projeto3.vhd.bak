@@ -1,0 +1,17 @@
+-- -----------------------------------------
+2 library ieee ;
+3 use ieee . std_logic_1164 . all ;
+4 -- -----------------------------------------
+5 entity exemplo_1 is
+6
+7 port (
+8 a , b , c , d: in bit ;
+9 y , z: out bit
+10 );
+11 end entity ;
+12 -- -----------------------------------------
+13 architecture exemplo_1 of exemplo_1 is
+14 signal x: std_logic_vector (7 downto 0) ;
+15 begin
+16 z <= a and b;
+17 end architecture

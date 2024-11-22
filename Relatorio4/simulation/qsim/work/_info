@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/Logica-Reconfiguravel/Relatorio4/simulation/qsim
+Ehard_block
+Z1 w1732278558
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 hIbO9BBYYWGW_8lVV<F893
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 [A0e0UP4j3EDHZ:h0KOS^3
+R0
+Z8 8project4.vho
+Z9 Fproject4.vho
+l0
+L35
+Vhj[i;a0dD85B`o1JPT^cg2
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+Z10 OV;C;10.5b;63
+32
+!s110 1732278560
+!i10b 1
+Z11 !s108 1732278560.000000
+Z12 !s90 -work|work|project4.vho|
+Z13 !s107 project4.vho|
+!i113 1
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
+l76
+L54
+Va5ClDYec`9chO`Ne0M1NL2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R10
+32
+Z16 !s110 1732278561
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Eproject4
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L89
+VDAdDhYlX9`AZL?^M8h:CF1
+!s100 MaCBM[RNgLoZd3h1eQ1@j3
+R10
+32
+R16
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 project4 0 22 DAdDhYlX9`AZL?^M8h:CF1
+l157
+L113
+VG]]QEkTOY9^T5JiPLbKM`2
+!s100 bbYi80>6NF;i=<SM7OGjN2
+R10
+32
+R16
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Eproject4_vhd_vec_tst
+Z17 w1732278557
+R5
+R6
+R0
+Z18 8Waveform1.vwf.vht
+Z19 FWaveform1.vwf.vht
+l0
+L32
+VhVc0d1Fn3g?_^Zfk?>5mY1
+!s100 lML@il^aAMziJ<kHG5Hb=2
+R10
+32
+R16
+!i10b 1
+Z20 !s108 1732278561.000000
+Z21 !s90 -work|work|Waveform1.vwf.vht|
+Z22 !s107 Waveform1.vwf.vht|
+!i113 1
+R14
+R15
+Aproject4_arch
+R5
+R6
+Z23 DEx4 work 20 project4_vhd_vec_tst 0 22 hVc0d1Fn3g?_^Zfk?>5mY1
+l47
+L34
+V5=2f1QI99@0nlRV;QoEjF0
+!s100 lP?UKI1SkB8>X?gBjXDd11
+R10
+32
+R16
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R14
+R15

@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SSD0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSD1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
