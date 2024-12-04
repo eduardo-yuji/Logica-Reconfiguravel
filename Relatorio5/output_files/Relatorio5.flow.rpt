@@ -1,5 +1,5 @@
 Flow report for Relatorio5
-Sun Dec 01 19:32:37 2024
+Wed Dec 04 09:28:08 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 01 19:32:37 2024       ;
+; Flow Status                        ; Successful - Wed Dec 04 09:28:08 2024       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Relatorio5                                  ;
 ; Top-level Entity Name              ; Relatorio5                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 77 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 75 / 49,760 ( < 1 % )                       ;
 ;     Total combinational functions  ; 72 / 49,760 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 49 / 49,760 ( < 1 % )                       ;
 ; Total registers                    ; 49                                          ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/01/2024 19:32:02 ;
+; Start date & time ; 12/04/2024 09:27:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Relatorio5          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589201.173309232224632         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 145862440356367.173331525904428        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -91,7 +91,11 @@ https://fpgasoftware.intel.com/eula.
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993     ; --          ; --                                ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --            ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -100,12 +104,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4854 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:13     ; 1.0                     ; 6222 MB             ; 00:00:18                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4920 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4647 MB             ; 00:00:01                           ;
-; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:49                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4805 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 5776 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4692 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4847 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4644 MB             ; 00:00:00                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,11 +118,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-8P7669F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-8P7669F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-8P7669F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-8P7669F  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-8P7669F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ap-607988        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ap-607988        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ap-607988        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ap-607988        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ap-607988        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
