@@ -1,0 +1,182 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+-- Definicao da entidade
+entity projeto8 is
+    Port (
+        clk         : in  STD_LOGIC;            -- Clock de entrada
+        reset       : in  STD_LOGIC;            -- Reset do sistema
+        mode        : in  STD_LOGIC;            -- Modo de operacao (0: normal, 1: standby/teste)
+        led_s1_green: out STD_LOGIC;            -- LED verde do semáforo 1
+        led_s1_yellow: out STD_LOGIC;           -- LED amarelo do semáforo 1
+        led_s1_red: out STD_LOGIC;              -- LED vermelho do semáforo 1
+        led_s2_green: out STD_LOGIC;            -- LED verde do semáforo 2
+        led_s2_yellow: out STD_LOGIC;           -- LED amarelo do semáforo 2
+        led_s2_red: out STD_LOGIC               -- LED vermelho do semáforo 2
+    );
+end projeto8;
+
+architecture behavior of projeto8 is
+
+    -- Definicao dos estados do semáforo
+    type state_type is (green_s1, yellow_s1, red_s1, green_s2, yellow_s2, red_s2, standby, test);
+    signal state, next_state : state_type;
+
+    -- Definicao de contadores para controle de tempo
+    signal counter : INTEGER range 0 to 100000000 := 0;  -- Contador para controlar o tempo
+    signal time_period : INTEGER := 50000000; -- Tempo de operação em modo normal (50 milhões de ciclos)
+
+begin
+
+    -- Máquina de estados principal
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            state <= green_s1;  -- Inicializa o semáforo 1 em verde
+            counter <= 0;
+        elsif rising_edge(clk) then
+            state <= next_state;
+        end if;
+    end process;
+
+    -- Lógica do contador e transição de estados
+    process(state, counter, mode)
+    begin
+        -- Estado de standby: os semáforos piscam a luz amarela
+        if mode = '1' then
+            next_state <= standby;
+        -- Estado de teste: os semáforos agem normalmente mas de forma mais rápida
+        elsif mode = '0' and counter < time_period then
+            next_state <= state;
+        else
+            case state is
+                -- Semáforo 1 em verde, semáforo 2 em vermelho
+                when green_s1 =>
+                    led_s1_green <= '1';
+                    led_s1_yellow <= '0';
+                    led_s1_red <= '0';
+                    led_s2_green <= '0';
+                    led_s2_yellow <= '0';
+                    led_s2_red <= '1';
+                    if counter >= time_period then
+                        next_state <= yellow_s1;
+                        counter <= 0;
+                    else
+                        next_state <= green_s1;
+                    end if;
+
+                -- Semáforo 1 em amarelo, semáforo 2 em vermelho
+                when yellow_s1 =>
+                    led_s1_green <= '0';
+                    led_s1_yellow <= '1';
+                    led_s1_red <= '0';
+                    led_s2_green <= '0';
+                    led_s2_yellow <= '0';
+                    led_s2_red <= '1';
+                    if counter >= time_period then
+                        next_state <= red_s1;
+                        counter <= 0;
+                    else
+                        next_state <= yellow_s1;
+                    end if;
+
+                -- Semáforo 1 em vermelho, semáforo 2 em verde
+                when red_s1 =>
+                    led_s1_green <= '0';
+                    led_s1_yellow <= '0';
+                    led_s1_red <= '1';
+                    led_s2_green <= '1';
+                    led_s2_yellow <= '0';
+                    led_s2_red <= '0';
+                    if counter >= time_period then
+                        next_state <= green_s2;
+                        counter <= 0;
+                    else
+                        next_state <= red_s1;
+                    end if;
+
+                -- Semáforo 2 em verde, semáforo 1 em vermelho
+                when green_s2 =>
+                    led_s1_green <= '0';
+                    led_s1_yellow <= '0';
+                    led_s1_red <= '1';
+                    led_s2_green <= '1';
+                    led_s2_yellow <= '0';
+                    led_s2_red <= '0';
+                    if counter >= time_period then
+                        next_state <= yellow_s2;
+                        counter <= 0;
+                    else
+                        next_state <= green_s2;
+                    end if;
+
+                -- Semáforo 2 em amarelo, semáforo 1 em vermelho
+                when yellow_s2 =>
+                    led_s1_green <= '0';
+                    led_s1_yellow <= '0';
+                    led_s1_red <= '1';
+                    led_s2_green <= '0';
+                    led_s2_yellow <= '1';
+                    led_s2_red <= '0';
+                    if counter >= time_period then
+                        next_state <= red_s2;
+                        counter <= 0;
+                    else
+                        next_state <= yellow_s2;
+                    end if;
+
+                -- Semáforo 2 em vermelho, semáforo 1 em verde
+                when red_s2 =>
+                    led_s1_green <= '1';
+                    led_s1_yellow <= '0';
+                    led_s1_red <= '0';
+                    led_s2_green <= '0';
+                    led_s2_yellow <= '0';
+                    led_s2_red <= '1';
+                    if counter >= time_period then
+                        next_state <= green_s1;
+                        counter <= 0;
+                    else
+                        next_state <= red_s2;
+                    end if;
+
+                -- Modo standby: ambos os semáforos piscam amarelo
+                when standby =>
+                    led_s1_green <= '0';
+                    led_s1_yellow <= '1';
+                    led_s1_red <= '0';
+                    led_s2_green <= '0';
+                    led_s2_yellow <= '1';
+                    led_s2_red <= '0';
+                    if counter >= time_period then
+                        next_state <= standby;
+                        counter <= 0;
+                    else
+                        next_state <= standby;
+                    end if;
+
+                -- Modo de teste: semáforos operam mais rapidamente
+                when test =>
+                    if counter >= time_period / 10 then  -- Reduz o tempo de operação em 10x
+                        next_state <= green_s1;  -- Exemplo simples de teste: volta ao estado inicial
+                        counter <= 0;
+                    else
+                        next_state <= test;
+                    end if;
+            end case;
+        end if;
+    end process;
+
+    -- Contador para controle de tempo
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if counter < time_period then
+                counter <= counter + 1;
+            end if;
+        end if;
+    end process;
+
+end behavior;
