@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity projeto7 is
+    Port ( clk      : in STD_LOGIC;
+           reset    : in STD_LOGIC;  -- Botão de reset (assíncrono)
+           pause    : in STD_LOGIC;  -- Botão de pausa
+           time_sel : in STD_LOGIC_VECTOR(1 downto 0); -- Seleção de tempo
+           LED      : out STD_LOGIC; -- LED aceso quando contagem chegar a 0
+           SSD      : out STD_LOGIC_VECTOR(27 downto 0)  -- 4 SSDs (7 segmentos cada)
+         );
+end projeto7;
+
+architecture projeto7 of projeto7 is
+
+    -- Definindo variáveis internas
+    signal counter   : integer range 0 to 99 := 99;  -- Contador
+    signal count_en  : STD_LOGIC := '1';  -- Habilitação de contagem
+    signal BCD       : STD_LOGIC_VECTOR(15 downto 0);  -- Valor BCD para os SSDs
+
+begin
+
+    -- Contador (Decrementa o valor a cada ciclo de clk)
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            counter <= 99;  -- Resetando o contador para 99
+        elsif rising_edge(clk) then
+            if count_en = '1' then
+                if counter > 0 then
+                    counter <= counter - 1;
+                else
+                    LED <= '1';  -- Acende o LED quando o contador chegar a 0
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- Seleção de tempo de contagem (definindo o valor inicial)
+    process(time_sel)
+    begin
+        case time_sel is
+            when "00" =>  -- Contagem de 10 segundos
+                counter <= 10;
+            when "01" =>  -- Contagem de 20 segundos
+                counter <= 20;
+            when "10" =>  -- Contagem de 30 segundos
+                counter <= 30;
+            when others => -- Contagem de 99 segundos como default
+                counter <= 99;
+        end case;
+    end process;
+
+    -- Controle de Pausa (Habilita/desabilita a contagem)
+    process(pause)
+    begin
+        if pause = '1' then
+            count_en <= '0';  -- Pausa a contagem
+        else
+            count_en <= '1';  -- Retorna à contagem
+        end if;
+    end process;
+
+    -- Função de conversão de inteiro para BCD (para 4 SSDs)
+    process(counter)
+    begin
+        -- Convertendo o valor do contador para BCD
+        -- O valor é dividido em unidades (1-9) e dezenas (10-90)
+        BCD(3 downto 0) <= std_logic_vector(to_unsigned(counter mod 10, 4));  -- Unidade
+        BCD(7 downto 4) <= std_logic_vector(to_unsigned(counter / 10, 4));   -- Dezena
+        BCD(11 downto 8) <= (others => '0');  -- SSD 3 (não usado)
+        BCD(15 downto 12) <= (others => '0');  -- SSD 4 (não usado)
+    end process;
+
+    -- Controlador dos SSDs (Monta os valores para exibir)
+    SSD <= BCD;
+
+end projeto7;

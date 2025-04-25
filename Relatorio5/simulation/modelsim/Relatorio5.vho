@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
--- DATE "12/01/2024 19:32:37"
+-- DATE "01/20/2025 15:58:21"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -94,7 +94,7 @@ ENTITY 	Relatorio5 IS
 	reset : IN std_logic;
 	enable : IN std_logic;
 	speed_select : IN std_logic;
-	leds : OUT std_logic_vector(9 DOWNTO 0)
+	leds : BUFFER std_logic_vector(9 DOWNTO 0)
 	);
 END Relatorio5;
 

@@ -1,5 +1,5 @@
 Fitter report for Relatorio5
-Sun Dec 01 19:32:26 2024
+Mon Jan 20 15:58:11 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Dec 01 19:32:26 2024       ;
+; Fitter Status                      ; Successful - Mon Jan 20 15:58:11 2025       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Relatorio5                                  ;
 ; Top-level Entity Name              ; Relatorio5                                  ;
@@ -152,12 +152,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.3%      ;
+;     Processors 2-12        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -199,7 +199,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.pin.
+The pin-out file can be found in C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1343,12 +1343,12 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN M8 (CLK1n, DIFFIO_RX_L36n, DIFFOUT_L36n, High_Speed)) File: C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 9
+Info (176353): Automatically promoted node clk~input (placed in PIN M8 (CLK1n, DIFFIO_RX_L36n, DIFFOUT_L36n, High_Speed)) File: C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-Info (176353): Automatically promoted node reset~input (placed in PIN M9 (CLK1p, DIFFIO_RX_L36p, DIFFOUT_L36p, High_Speed)) File: C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 10
+Info (176353): Automatically promoted node reset~input (placed in PIN M9 (CLK1p, DIFFIO_RX_L36p, DIFFOUT_L36p, High_Speed)) File: C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node tempo_piscar[0]~0 File: C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 27
+        Info (176357): Destination node tempo_piscar[0]~0 File: C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/Relatorio5.vhd Line: 27
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1379,23 +1379,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6222 megabytes
-    Info: Processing ended: Sun Dec 01 19:32:27 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 6223 megabytes
+    Info: Processing ended: Mon Jan 20 15:58:12 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Eduardo Yuji/OneDrive/Documentos/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.fit.smsg.
+The suppressed messages can be found in C:/Users/Yuji/Documents/Faculdade/9° Período/Logica-Reconfiguravel/Relatorio5/output_files/Relatorio5.fit.smsg.
 
 
