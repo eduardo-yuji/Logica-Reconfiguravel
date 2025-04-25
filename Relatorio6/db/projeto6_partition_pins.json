@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"partitions" : [
 		{
@@ -102,4 +103,110 @@
 			]
 		}
 	]
+=======
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "min_val[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min_val[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min_val[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min_val[3]",
+					"strict" : false
+				},
+				{
+					"name" : "max_val[0]",
+					"strict" : false
+				},
+				{
+					"name" : "max_val[1]",
+					"strict" : false
+				},
+				{
+					"name" : "max_val[2]",
+					"strict" : false
+				},
+				{
+					"name" : "max_val[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada4[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431
 }

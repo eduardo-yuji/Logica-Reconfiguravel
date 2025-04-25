@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Mon Jan 20 15:57:59 2025
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : Relatorio5
@@ -14,3 +15,21 @@ Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
 UFM blocks : 0
 ADC blocks : 0
+=======
+Analysis & Synthesis Status : Successful - Wed Dec 04 09:27:46 2024
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : Relatorio5
+Top-level Entity Name : Relatorio5
+Family : MAX 10
+Total logic elements : 72
+    Total combinational functions : 70
+    Dedicated logic registers : 49
+Total registers : 49
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431

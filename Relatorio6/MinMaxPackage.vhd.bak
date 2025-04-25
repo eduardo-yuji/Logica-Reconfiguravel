@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -38,3 +39,45 @@ package body MinMaxPackage is
     end findMax;
 
 end MinMaxPackage;
+=======
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+package MinMaxPackage is
+    -- Tipo de dados para um array de valores unsigned
+    subtype unsignedArray is array (natural range <>) of unsigned;
+    
+    -- Funções para encontrar o valor mínimo e máximo
+    function findMin(values : unsignedArray) return unsigned;
+    function findMax(values : unsignedArray) return unsigned;
+end package;
+
+package body MinMaxPackage is
+
+    -- Definição da função para encontrar o valor mínimo
+    function findMin(values : unsignedArray) return unsigned is
+        variable min_val : unsigned(values(0)'length-1 downto 0) := (others => '1');
+    begin
+        for i in values'range loop
+            if values(i) < min_val then
+                min_val := values(i);
+            end if;
+        end loop;
+        return min_val;
+    end findMin;
+
+    -- Definição da função para encontrar o valor máximo
+    function findMax(values : unsignedArray) return unsigned is
+        variable max_val : unsigned(values(0)'length-1 downto 0) := (others => '0');
+    begin
+        for i in values'range loop
+            if values(i) > max_val then
+                max_val := values(i);
+            end if;
+        end loop;
+        return max_val;
+    end findMax;
+
+end MinMaxPackage;
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431

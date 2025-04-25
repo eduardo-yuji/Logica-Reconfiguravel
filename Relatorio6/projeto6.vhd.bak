@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 library ieee ;
 2 [...]
 3 -- ------------------------------- ----------------------
@@ -17,4 +18,25 @@ tipo definido por n ́os
 14 begin
 15 -- Para evitar o erro , criamos portas do tipo unsigned e as atribu  ́ı mos ao sinal do
 tipo que criamos
+=======
+library ieee ;
+2 [...]
+3 -- ------------------------------- ----------------------
+4 entity atividade_6 is
+5 generic (
+6 [...]
+7 port (
+8 --x: in unsigned_array (0 to num_inputs -1)( num_bits -1 downto 0); -- Causar  ́a erro
+se tentarmos compilar e simular
+9 entrada1 , entrada2 , entrada3 , entrada4 : in unsigned ( num_bits -1 downto 0) ; --
+Sinais " intermedi  ́a rios "
+10 [...]) ;
+11 -- ------------------------------- ----------------------
+12 architecture atividade_6 of atividade_6 is
+13 signal x : unsigned_array (0 to num_inputs -1) ( num_bits -1 downto 0) ; -- Sinal com o
+tipo definido por n ́os
+14 begin
+15 -- Para evitar o erro , criamos portas do tipo unsigned e as atribu  ́ı mos ao sinal do
+tipo que criamos
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431
 16 x <= ( entrada1 , entrada2 , entrada3 , entrada4 ) ;

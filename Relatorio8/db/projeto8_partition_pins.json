@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_s1_green",
+					"strict" : false
+				},
+				{
+					"name" : "led_s1_yellow",
+					"strict" : false
+				},
+				{
+					"name" : "led_s1_red",
+					"strict" : false
+				},
+				{
+					"name" : "led_s2_green",
+					"strict" : false
+				},
+				{
+					"name" : "led_s2_yellow",
+					"strict" : false
+				},
+				{
+					"name" : "led_s2_red",
+					"strict" : false
+				},
+				{
+					"name" : "standby_switch",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "mode",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

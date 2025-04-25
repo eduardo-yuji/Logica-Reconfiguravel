@@ -3,6 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
+	P ActionCode(Cfg)
+		Device PartName(10M50DAF484) Path("H:/Logica-Reconfiguravel/Relatorio4/output_files/") File("project4.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

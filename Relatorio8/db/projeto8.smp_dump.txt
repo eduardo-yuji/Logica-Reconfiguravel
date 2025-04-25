@@ -1,0 +1,10 @@
+
+State Machine - |projeto8|current_state
+Name current_state.TEST current_state.STANDBY2 current_state.STANDBY current_state.S2_YELLOW current_state.S1_RED_S2_GREEN current_state.S1_YELLOW current_state.S1_GREEN 
+current_state.S1_GREEN 0 0 0 0 0 0 0 
+current_state.S1_YELLOW 0 0 0 0 0 1 1 
+current_state.S1_RED_S2_GREEN 0 0 0 0 1 0 1 
+current_state.S2_YELLOW 0 0 0 1 0 0 1 
+current_state.STANDBY 0 0 1 0 0 0 1 
+current_state.STANDBY2 0 1 0 0 0 0 1 
+current_state.TEST 1 0 0 0 0 0 1 

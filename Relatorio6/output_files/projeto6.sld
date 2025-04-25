@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <sld_project_info/>
+=======
+<sld_project_info/>
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431

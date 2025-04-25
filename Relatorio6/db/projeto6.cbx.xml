@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="projeto6">
 	</PROJECT>
 </LOG_ROOT>
+=======
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="projeto6">
+	</PROJECT>
+</LOG_ROOT>
+>>>>>>> 2fdf6a7eb99579132e02f4b97c83edac185b2431
